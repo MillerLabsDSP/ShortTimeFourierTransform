@@ -29,6 +29,7 @@ private:
     
     WindowType windowType = Hanning;
     
+    // -------------------- WINDOW TYPES --------------------
     static void hannWindow(float* window, int length) {
         float delta = 6.28318500518798828125f / float(length);
         float phase = 0.f;
@@ -37,6 +38,7 @@ private:
             phase += delta;
         }
     }
+    // ------------------------------------------------------
     
     void processSpectrum(float* data, int numBins);
     void processFrame(bool bypassed);
